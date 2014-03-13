@@ -1,42 +1,35 @@
 	<div class="contact-wrapper wrapper">
       <div class="container">
       	<div class="row">
-	        <div class="col-sm-12 text-center">
-	          <h1 class="section-title" style="color:white">Contact Tom</h1>
+	        <div class="col-sm-6 text-center">
+	          <h1 class="section-title" style="color:white">Contact</h1>
 	        </div>
 	      </div>
 	      <div class="row">
 	        <div class="col-sm-6">
-	            <form role="form" id="contact_form">
-				  <div class="form-group">
-				    <input type="email" class="form-control" id="emailInput" placeholder="Your email" required>
-				  </div>
-				  <div class="form-group">
-				    <textarea class="form-control" id="messageInput" placeholder="Message" required></textarea>
-				  </div>
-				 
-				  <div class="row">
-				  	<div class="col-sm-6 col-sm-offset-3"><button type="submit" id="send" class="btn btn-primary btn-lg btn-block">Send Message</button></div>
-		  		  </div>
-				</form>
+	            <table id="contact">
+	            	<tr>
+	            		<td>Address</td>
+	            		<td>1815 Easy St.<br />Mineral Point, WI 55555</td>
+	            	</tr>
+	            	<tr>
+	            		<td>Phone</td>
+	            		<td>(123) 456-7890</td>
+	            	</tr>
+	            	<tr>
+	            		<td>Email:</td>
+	            		<td>bill@sandstonenursery.net</td>
+	            	<tr>
+	            	<tr>
+	            		<td>Hours:</td>
+	            		<td>
+	            			M-F 8am-5pm<br />
+							Sat 10am-4pm<br />
+							Sun Closed
+	            		</td>
+	            	</tr>
+	            </table>
 	        </div>
-
-	        <div class="col-sm-6">
-	          <p class="defer-requests text-center">At this time, all website requests will be directed to <a href="http://badgerinnovations.com">Badger Innovations</a>.</p>
-	          <p class="text-center icons">
-	            <a href="http://facebook.com/t.jessessky"><i class="fa fa-facebook-square fa-inverse"></i></a>
-	            <a href="http://twitter.com/tomjessessky"><i class="fa fa-twitter-square fa-inverse "></i></a>
-	            <a href="http://www.linkedin.com/pub/thomas-jessessky-jr/49/789/178"><i class="fa fa-linkedin-square fa-inverse "></i></a>
-	            <a href="https://plus.google.com/114502222984134013474/posts"><i class="fa fa-google-plus-square fa-inverse "></i></a>
-	            <a href="http://github.com/tomjessessky"><i class="fa fa-github-square fa-inverse "></i></a>
-	          </p>
-	        </div>
-	      </div>
-	      <div class="row">
-	      	<div class="col-sm-12 text-center copyright">
-	      		&copy<?php echo date('Y'); ?> <a href="http://tomjessessky.com">Tom Jessessky</a>
-      		</div>
-      	  </div>
       </div>
     </div>		
 			
