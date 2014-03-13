@@ -1,0 +1,16 @@
+{
+  "name": "sandstone_wordpress",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^0.4.3",
+    "grunt-contrib-less": "^0.10.0",
+    "grunt-contrib-watch": "^0.5.3"
+  }
+}
