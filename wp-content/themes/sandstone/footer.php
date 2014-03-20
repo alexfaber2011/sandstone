@@ -1,13 +1,9 @@
-	<div class="contact-wrapper wrapper">
+	<div class="contact-wrapper wrapper footer">
       <div class="container">
-      	<div class="row">
-	        <div class="col-sm-6 text-center">
-	          <h1 class="section-title" style="color:white">Contact</h1>
-	        </div>
-	      </div>
 	      <div class="row">
 	        <div class="col-sm-6">
-	            <table id="contact">
+	        	<h1 class="section-title text-center" style="color:white">Contact</h1>
+	            <table class="center-50-50">
 	            	<tr>
 	            		<td>Address</td>
 	            		<td>1815 Easy St.<br />Mineral Point, WI 55555</td>
@@ -30,6 +26,30 @@
 	            	</tr>
 	            </table>
 	        </div>
+	        <div class="col-sm-6">
+	        	<h1 class="section-title text-center" style="color:white">Email List Signup</h1>
+	        	<p class="text-center">
+	        		Sign up for our email list and get special offers sent to you on your birthday!
+	        	</p>
+	        	<form>
+	        		<table class="center-50-50">
+	        			<tr>
+	        				<td>Email:</td>
+	        				<td><input name="email" type="text" /></td>
+	        			</tr>
+	        			<tr>
+	        				<td>Birthday:</td>
+	        				<td><input name="birthday" type="text" /><td>
+	        			</tr>
+	        		</table>
+	        		<input style="margin-left: 50%" type="submit" value="Sign Up" />
+	        	</form>
+	        </div>
+      </div>
+      <div class="row">
+   		<div class="col-xs-12 text-center">
+  			<p>&copy; 2014 Badger Innovations</p>
+  		</div>
       </div>
     </div>		
 			
