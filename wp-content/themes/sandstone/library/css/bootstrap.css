@@ -6852,6 +6852,18 @@ table.center-50-50 tr td:first-child {
 table.center-50-50 tr:last-child td {
   padding-bottom: 10px;
 }
+#slideshow-container {
+  position: relative;
+  height: 400px;
+  border: 1px solid black;
+  width: 100%;
+}
+#slideshow-container #map {
+  background-color: green;
+}
+#slideshow-container #map-info {
+  background-color: yellow;
+}
 .footer {
   color: white;
 }
