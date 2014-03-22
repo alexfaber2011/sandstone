@@ -1,48 +1,71 @@
 <?php get_header(); ?>
 			<div class="container">
-				<!-- <div class="row">
-					<div class="col-lg-12">
-						<div id="slideshow-container">
-							<div id="images">
-
-							</div> images
-							 <div id="info" class="text-center">
-								<h1>Location</h1>
-								<div id="map-container">
-									
-									<div class="row">
-										<div id="map" class="col-lg-8">
-
-										</div> <!-- map
-										<div id="map-info" class="col-lg-4">
-
-										</div><!-- map-info
-									</div>
-								</div><!-- map-container
-							</div> <!-- info
-						</div> <!-- slideshow-container
-					</div> 
-				</div> -->
+				<div class="row">
+					<h1 class="text-center col-xs-12">Garden Center</h1>
+				</div>
 				<div id="content" class="clearfix row">
-					
-					<div id="main" class="col-sm-12 clearfix" role="main">
-
-						<?php query_posts( array ( 'category_name' => 'Garden Center', 'posts_per_page' => 3 ) ); ?>
-						<?php while (have_posts()) : the_post(); ?>
-							<?php
-								$garden_object = get_post(the_ID);
-							?>
-							<h1><?php the_title(); ?></h1>
-							<h1>Title: <?php echo the_ID + the_title + $garden_object->post_title; ?></h1>
-						
-						
-						<?php endwhile; ?>	
-				
-					</div> <!-- end #main -->
-	    
-					<?php //get_sidebar(); // sidebar 1 ?>
-	    
-				</div> <!-- end #content -->
+					<?php 
+						$args = array(
+							'category' => 3,
+						);
+						$posts = get_posts($args);
+						var_dump($posts);
+					?>
+					<div class="garden-center-block text-center col-lg-3 col-md-4">
+						<img src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Wiktionary_small.svg/350px-Wiktionary_small.svg.png" height="180px" alt="oops" />
+						<h2>Annuals</h2>
+						<p>
+							lorem ipsum dolar sit amet. blura mira sola des in caten.
+						</p>
+					</div>
+					<div class="garden-center-block text-center col-lg-3 col-md-4">
+						<img src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Wiktionary_small.svg/350px-Wiktionary_small.svg.png" height="180px" alt="oops" />
+						<h2>Annuals</h2>
+						<p>
+							lorem ipsum dolar sit amet. blura mira sola des in caten.
+						</p>
+					</div>
+					<div class="garden-center-block text-center col-lg-3 col-md-4">
+						<img src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Wiktionary_small.svg/350px-Wiktionary_small.svg.png" height="180px" alt="oops" />
+						<h2>Annuals</h2>
+						<p>
+							lorem ipsum dolar sit amet. blura mira sola des in caten.
+						</p>
+					</div>
+					<div class="garden-center-block text-center col-lg-3 col-md-4">
+						<img src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Wiktionary_small.svg/350px-Wiktionary_small.svg.png" height="180px" alt="oops" />
+						<h2>Annuals</h2>
+						<p>
+							lorem ipsum dolar sit amet. blura mira sola des in caten.
+						</p>
+					</div>
+	   			</div> <!-- end #content -->
+	   			<div class="row">
+	   				<h1 class="text-center col-xs-12">Design and Build</h1>
+	   			</div>
+	   			<div class="row">
+	   				<div class="text-center col-md-4">
+	   					<img src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Wiktionary_small.svg/350px-Wiktionary_small.svg.png" height="210px" alt="oops" />
+						<h2>Annuals</h2>
+						<p>
+							lorem ipsum dolar sit amet. blura mira sola des in caten.
+						</p>
+	   				</div>
+	   				<div class="text-center col-md-4">
+	   					<img src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Wiktionary_small.svg/350px-Wiktionary_small.svg.png" height="210px" alt="oops" />
+						<h2>Annuals</h2>
+						<p>
+							lorem ipsum dolar sit amet. blura mira sola des in caten.
+						</p>
+	   				</div>
+	   				<div class="text-center col-md-4">
+	   					<img src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Wiktionary_small.svg/350px-Wiktionary_small.svg.png" height="210px" alt="oops" />
+						<h2>Annuals</h2>
+						<p>
+							lorem ipsum dolar sit amet. blura mira sola des in caten.
+						</p>
+	   				</div>
+	   			</div>
 			</div><!-- container -->
 
 <?php get_footer(); ?>
