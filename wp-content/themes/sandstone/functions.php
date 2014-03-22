@@ -496,4 +496,30 @@ if( !function_exists( "theme_js" ) ) {
 }
 add_action( 'wp_enqueue_scripts', 'theme_js' );
 
+// function my_custom_post_gardent_center() {
+//   $labels = array(
+//     'name'               => _x( 'Products', 'post type general name' ),
+//     //'singular_name'      => _x( 'Product', 'post type singular name' ),
+//     'add_new'            => _x( 'Add New', 'entry' ),
+//     'add_new_item'       => __( 'Add New Entry' ),
+//     'edit_item'          => __( 'Edit Entry' ),
+//     'new_item'           => __( 'New Entry' ),
+//     'all_items'          => __( 'All Entry' ),
+//     'view_item'          => __( 'View Entries' ),
+//     'not_found'          => __( 'No entries found' ),
+//     'parent_item_colon'  => '',
+//     'menu_name'          => 'Garden Center'
+//   );
+//   $args = array(
+//     'labels'        => $labels,
+//     'description'   => 'Gardent Center Content',
+//     'public'        => true,
+//     'menu_position' => 5,
+//     'supports'      => array( 'title', 'editor', 'thumbnail', 'excerpt' ),
+//     'has_archive'   => true,
+//   );
+//   register_post_type( 'garden_center', $args ); 
+// }
+// add_action( 'init', 'my_custom_post_gardent_center' );
+
 ?>
