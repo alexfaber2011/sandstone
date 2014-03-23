@@ -1,5 +1,50 @@
 <?php get_header(); ?>
+<?php include('customFunctions.php'); ?>
 			<div class="container">
+				<div class="row">
+					<div id="slideshow" class="carousel slide col-md-9 text-center" data-ride="carousel">
+						<?php
+							$output_array = array();
+							$args = array(
+								'posts_per_page' => -1,
+								'category' => 10,
+							);
+							$posts = get_posts($args);
+							$output_array = orderByTag($posts);
+
+						?>
+					  <!-- Indicators - begin creating the number of carousel-indicators-->
+					  <ol class="carousel-indicators">
+					  	<?php for($i = 0; $i < count($posts); $i++) : ?>
+					    	<li data-target="#slideshow" data-slide-to="<?php echo $i ?>" <?php if($i == 0) : ?>class="active"><?php endif ?></li>
+						<?php endfor ?>
+					  </ol>
+					  <!-- Wrapper for slides -->
+					  <div class="carousel-inner">
+						  <?php for($i = 1; $i <= count($output_array); $i++) : ?>
+						  	<div class="item <?php if($i == 1) echo 'active' ?>">
+						      	<?php
+									echo $output_array[$i]->post_content;
+								?>
+						      <!-- <div class="carousel-caption"> -->
+						        <?php //echo $output_array[$i]->post_title; ?>
+						      <!-- </div> -->
+						    </div>
+						  <?php endfor ?>
+					  </div>
+
+					  <!-- Controls -->
+					  <a class="left carousel-control" href="#slideshow" data-slide="prev">
+					    <span class="glyphicon glyphicon-chevron-left"></span>
+					  </a>
+					  <a class="right carousel-control" href="#slideshow" data-slide="next">
+					    <span class="glyphicon glyphicon-chevron-right"></span>
+					  </a>
+					</div>
+					<div class="col-md-3">
+						stuff here
+					</div>
+				</div> <!-- row -->
 				<div class="row">
 					<h1 class="text-center col-xs-12">Garden Center</h1>
 				</div>
@@ -11,11 +56,7 @@
 							'category' => 3,
 						);
 						$posts = get_posts($args);
-						foreach($posts as $post){
-							$tags = wp_get_post_tags($post->ID);
-							$index = intval($tags[0]->name);
-							$output_array[$index] = $post;
-						}
+						$output_array = orderByTag($posts);
 					?>
 					<?php for($i = 1; $i <= count($output_array) && $i < 5; $i++) : ?>
 						<div class="garden-center-block text-center col-lg-3 col-md-6">
@@ -43,11 +84,7 @@
 							'category' => 4,
 						);
 						$posts = get_posts($args);
-						foreach($posts as $post){
-							$tags = wp_get_post_tags($post->ID);
-							$index = intval($tags[0]->name);
-							$output_array[$index] = $post;
-						}
+						$output_array = orderByTag($posts);
 					?>
 					<?php for($i = 1; $i <= count($output_array) && $i < 4; $i++) : ?>
 						<div class="garden-center-block text-center col-md-4">
@@ -65,5 +102,10 @@
 					<?php endfor ?>
 	   			</div> <!-- end #content -->
 			</div><!-- container -->
+			<script>
+				$('.carousel').carousel({
+				  interval: 2000
+				})
+			</script>
 
 <?php get_footer(); ?>

@@ -6864,6 +6864,18 @@ table.center-50-50 tr:last-child td {
 #slideshow-container #map-info {
   background-color: yellow;
 }
+.carousel-inner {
+  width: 100%;
+}
+#slideshow {
+  padding: 0px;
+  max-height: 440px;
+  overflow: hidden;
+}
+#slideshow img {
+  width: 100%;
+  height: auto;
+}
 .footer {
   color: white;
 }
