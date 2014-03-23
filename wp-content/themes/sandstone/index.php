@@ -5,67 +5,61 @@
 				</div>
 				<div id="content" class="clearfix row">
 					<?php 
+						$output_array = array();
 						$args = array(
+							'posts_per_page' => -1,
 							'category' => 3,
 						);
 						$posts = get_posts($args);
-						var_dump($posts);
+						foreach($posts as $post){
+							$output_array[intval(wp_get_post_tags($post->ID)[0]->name)] = $post;
+						}
 					?>
-					<div class="garden-center-block text-center col-lg-3 col-md-4">
-						<img src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Wiktionary_small.svg/350px-Wiktionary_small.svg.png" height="180px" alt="oops" />
-						<h2>Annuals</h2>
-						<p>
-							lorem ipsum dolar sit amet. blura mira sola des in caten.
-						</p>
-					</div>
-					<div class="garden-center-block text-center col-lg-3 col-md-4">
-						<img src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Wiktionary_small.svg/350px-Wiktionary_small.svg.png" height="180px" alt="oops" />
-						<h2>Annuals</h2>
-						<p>
-							lorem ipsum dolar sit amet. blura mira sola des in caten.
-						</p>
-					</div>
-					<div class="garden-center-block text-center col-lg-3 col-md-4">
-						<img src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Wiktionary_small.svg/350px-Wiktionary_small.svg.png" height="180px" alt="oops" />
-						<h2>Annuals</h2>
-						<p>
-							lorem ipsum dolar sit amet. blura mira sola des in caten.
-						</p>
-					</div>
-					<div class="garden-center-block text-center col-lg-3 col-md-4">
-						<img src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Wiktionary_small.svg/350px-Wiktionary_small.svg.png" height="180px" alt="oops" />
-						<h2>Annuals</h2>
-						<p>
-							lorem ipsum dolar sit amet. blura mira sola des in caten.
-						</p>
-					</div>
+					<?php for($i = 1; $i <= count($output_array) && $i < 5; $i++) : ?>
+						<div class="garden-center-block text-center col-lg-3 col-md-6">
+							<?php
+								$image = get_the_post_thumbnail($output_array[$i]->ID);
+								if($image != ''){
+									echo $image;
+								}
+							?>
+							<h2><?php echo $output_array[$i]->post_title; ?></h2>
+							<p>
+								<?php echo $output_array[$i]->post_content; ?>
+							</p>
+						</div>
+					<?php endfor ?>
 	   			</div> <!-- end #content -->
 	   			<div class="row">
 	   				<h1 class="text-center col-xs-12">Design and Build</h1>
 	   			</div>
-	   			<div class="row">
-	   				<div class="text-center col-md-4">
-	   					<img src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Wiktionary_small.svg/350px-Wiktionary_small.svg.png" height="210px" alt="oops" />
-						<h2>Annuals</h2>
-						<p>
-							lorem ipsum dolar sit amet. blura mira sola des in caten.
-						</p>
-	   				</div>
-	   				<div class="text-center col-md-4">
-	   					<img src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Wiktionary_small.svg/350px-Wiktionary_small.svg.png" height="210px" alt="oops" />
-						<h2>Annuals</h2>
-						<p>
-							lorem ipsum dolar sit amet. blura mira sola des in caten.
-						</p>
-	   				</div>
-	   				<div class="text-center col-md-4">
-	   					<img src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Wiktionary_small.svg/350px-Wiktionary_small.svg.png" height="210px" alt="oops" />
-						<h2>Annuals</h2>
-						<p>
-							lorem ipsum dolar sit amet. blura mira sola des in caten.
-						</p>
-	   				</div>
-	   			</div>
+	   			<div class="clearfix row">
+					<?php 
+						$output_array = array();
+						$args = array(
+							'posts_per_page' => -1,
+							'category' => 4,
+						);
+						$posts = get_posts($args);
+						foreach($posts as $post){
+							$output_array[intval(wp_get_post_tags($post->ID)[0]->name)] = $post;
+						}
+					?>
+					<?php for($i = 1; $i <= count($output_array) && $i < 4; $i++) : ?>
+						<div class="garden-center-block text-center col-md-4">
+							<?php
+								$image = get_the_post_thumbnail($output_array[$i]->ID);
+								if($image != ''){
+									echo $image;
+								}
+							?>
+							<h2><?php echo $output_array[$i]->post_title; ?></h2>
+							<p>
+								<?php echo $output_array[$i]->post_content; ?>
+							</p>
+						</div>
+					<?php endfor ?>
+	   			</div> <!-- end #content -->
 			</div><!-- container -->
 
 <?php get_footer(); ?>
