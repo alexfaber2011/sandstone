@@ -12,7 +12,8 @@
 						);
 						$posts = get_posts($args);
 						foreach($posts as $post){
-							$output_array[intval(wp_get_post_tags($post->ID)[0]->name)] = $post;
+							$index = intval(wp_get_post_tags($post->ID)[0]->name);
+							$output_array[$index] = $post;
 						}
 					?>
 					<?php for($i = 1; $i <= count($output_array) && $i < 5; $i++) : ?>
