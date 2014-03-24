@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 <?php include('customFunctions.php'); ?>
 			<div class="container">
+				<a name="home"></a>
 				<div class="row">
 					<div id="slideshow" class="carousel slide col-md-8 text-center" data-ride="carousel">
 						<?php
@@ -66,6 +67,7 @@
 					</div>
 				</div> <!-- row -->
 				<div class="row">
+					<a name="garden-center"></a>
 					<h1 class="text-center col-xs-12">Garden Center</h1>
 				</div>
 				<div id="content" class="clearfix row">
@@ -94,6 +96,7 @@
 					<?php endfor ?>
 	   			</div> <!-- end #content -->
 	   			<div class="row">
+	   				<a name="design-and-build"></a>
 	   				<h1 class="text-center col-xs-12">Design and Build</h1>
 	   			</div>
 	   			<div class="clearfix row">

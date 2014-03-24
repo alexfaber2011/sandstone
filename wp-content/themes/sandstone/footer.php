@@ -1,5 +1,6 @@
 	<div class="contact-wrapper wrapper footer">
       <div class="container">
+      	<a name="contact"></a>
 	      <div class="row">
 	        <div class="col-sm-6">
 	        	<h1 class="section-title text-center" style="color:white">Contact</h1>

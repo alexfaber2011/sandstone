@@ -38,13 +38,11 @@
 		<!-- end of wordpress head -->
 		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 		<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+		<script type="text/javascript" language="JavaScript" src="<?php echo get_bloginfo('template_url') ?>/js/smoothScroll.js"></script>
 	</head>
 	
-	<body <?php body_class(); ?>>
-		<?php if(!is_home() && !is_front_page()): ?>
-				
+	<body <?php body_class(); ?>>				
 			<header role="banner">
-					
 				<div class="navbar navbar-default navbar-fixed-top">
 					<div class="container">
 						<div class="navbar-header">
@@ -59,21 +57,11 @@
 
 						<div class="collapse navbar-collapse navbar-responsive-collapse">
 							<?php wp_bootstrap_main_nav(); // Adjust using Menus in Wordpress Admin ?>
-
-							<?php //if(of_get_option('search_bar', '1')) {?>
-							<form class="navbar-form navbar-right" role="search" method="get" id="searchform" action="<?php echo home_url( '/' ); ?>">
-								<div class="form-group">
-									<input name="s" id="s" type="text" class="search-query form-control" autocomplete="off" placeholder="<?php _e('Search','wpbootstrap'); ?>" data-provide="typeahead" data-items="4" data-source='<?php echo $typeahead_data; ?>'>
-								</div>
-							</form>
-							<?php //} ?>
 						</div>
 
 					</div> <!-- end .container -->
 				</div> <!-- end .navbar -->
 			
 			</header> <!-- end header -->
-
-		<?php endif; ?>
 		
 		<div>

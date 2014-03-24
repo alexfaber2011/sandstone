@@ -6899,6 +6899,12 @@ table.center-50-50 tr:last-child td {
 #location p {
   text-align: left;
 }
+@media screen and (min-width: 768px) {
+  #menu-main {
+    position: relative;
+    float: right;
+  }
+}
 .footer {
   color: white;
 }
