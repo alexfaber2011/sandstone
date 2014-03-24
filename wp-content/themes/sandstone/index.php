@@ -2,7 +2,7 @@
 <?php include('customFunctions.php'); ?>
 			<div class="container">
 				<div class="row">
-					<div id="slideshow" class="carousel slide col-md-9 text-center" data-ride="carousel">
+					<div id="slideshow" class="carousel slide col-md-8 text-center" data-ride="carousel">
 						<?php
 							$output_array = array();
 							$args = array(
@@ -41,8 +41,28 @@
 					    <span class="glyphicon glyphicon-chevron-right"></span>
 					  </a>
 					</div>
-					<div class="col-md-3">
-						stuff here
+					<div class="col-md-4 text-center">
+						<h2>Location</h2>
+						<div id="location">
+							<div id="map">
+								<!-- - -->
+							</div>
+							<p class="bold">Sandstone Nursery</p>
+							<p>
+								1815 East St.<br />
+								Mineral Point, WI 55555
+							</p>
+							<div id="map-this">
+								<!-- - -->
+							</div>
+						</div>
+						<h2>Hours</h2>
+						<h3>
+							M-F 8am-5pm<br />
+							Sat 10am-4pm<br />
+							Sun Closed<br />
+						</h3>
+						<h3><span class="bold">Phone&nbsp;&nbsp;&nbsp;</span>(123) 456-7890</h3>
 					</div>
 				</div> <!-- row -->
 				<div class="row">
